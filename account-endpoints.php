@@ -158,6 +158,18 @@ body .woocommerce table thead th.subscription-next-payment {
     text-align: left !important;
 }
 
+/* Remove unused auto-renew toggle column */
+.woocommerce-account table.shop_table thead th.subscription-auto-renew-toggle,
+.woocommerce-account table.shop_table td.subscription-auto-renew-toggle,
+.woocommerce table.my_account_subscriptions thead th.subscription-auto-renew-toggle,
+.woocommerce table.my_account_subscriptions td.subscription-auto-renew-toggle,
+body .woocommerce-account table thead th.subscription-auto-renew-toggle,
+body .woocommerce-account table tbody tr td.subscription-auto-renew-toggle,
+body .woocommerce table thead th.subscription-auto-renew-toggle,
+body .woocommerce table tbody tr td.subscription-auto-renew-toggle {
+    display: none !important;
+}
+
 .woocommerce-account table.shop_table td.subscription-next-payment,
 .woocommerce table.my_account_subscriptions td.subscription-next-payment,
 body .woocommerce-account table tbody tr td.subscription-next-payment,
