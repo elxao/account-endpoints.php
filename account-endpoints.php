@@ -106,6 +106,7 @@ body .woocommerce table thead th.subscription-status {
     text-align: left !important;
     width: 15% !important;
     min-width: 120px !important;
+    position: relative !important;
 }
 
 /* Status column cells - NO flex so borders stay full height */
@@ -121,6 +122,29 @@ body .woocommerce table tbody tr td.subscription-status {
     padding: 16px !important;
     vertical-align: middle !important;
     white-space: nowrap !important;
+    position: relative !important;
+}
+
+/* Reinforce inner divider so the right border remains continuous */
+.woocommerce-account table.shop_table thead th.subscription-status::after,
+.woocommerce-account table.shop_table thead th.order-status::after,
+.woocommerce table.my_account_subscriptions thead th.subscription-status::after,
+.woocommerce table.my_account_subscriptions thead th.order-status::after,
+body .woocommerce-account table thead th.subscription-status::after,
+body .woocommerce table thead th.subscription-status::after,
+.woocommerce-account table.shop_table td.subscription-status::after,
+.woocommerce-account table.shop_table td.order-status::after,
+.woocommerce table.my_account_subscriptions td.subscription-status::after,
+.woocommerce table.my_account_subscriptions td.order-status::after,
+body .woocommerce-account table tbody tr td.subscription-status::after,
+body .woocommerce table tbody tr td.subscription-status::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: -1px !important;
+    bottom: 0 !important;
+    width: 1px !important;
+    background: #E8E6DC !important;
 }
 
 /* Next payment column - force left alignment */
@@ -153,14 +177,15 @@ body .woocommerce mark {
     border-radius: 0 !important;
     font-size: 14px !important;
     font-weight: 400 !important;
-    display: inline !important;
+    display: inline-flex !important;
+    align-items: center !important;
     background: transparent !important;
     background-color: transparent !important;
     color: #141413 !important;
     border: none !important;
     text-align: left !important;
-    line-height: 1.5 !important;
-    vertical-align: baseline !important;
+    line-height: 1.4 !important;
+    vertical-align: middle !important;
 }
 
 /* Force cells to have white background */
