@@ -147,12 +147,33 @@ body .woocommerce table tbody tr td.subscription-status::after {
     background: #E8E6DC !important;
 }
 
-/* Next payment column - force left alignment */
+/* Next payment column - sizing & alignment */
+.woocommerce-account table.shop_table thead th.subscription-next-payment,
+.woocommerce table.my_account_subscriptions thead th.subscription-next-payment,
+body .woocommerce-account table thead th.subscription-next-payment,
+body .woocommerce table thead th.subscription-next-payment {
+    width: 22% !important;
+    min-width: 180px !important;
+    padding: 16px 18px !important;
+    text-align: left !important;
+}
+
 .woocommerce-account table.shop_table td.subscription-next-payment,
 .woocommerce table.my_account_subscriptions td.subscription-next-payment,
 body .woocommerce-account table tbody tr td.subscription-next-payment,
 body .woocommerce table tbody tr td.subscription-next-payment {
+    width: 22% !important;
+    min-width: 180px !important;
+    padding: 14px 18px !important;
     text-align: left !important;
+}
+
+.woocommerce-account table.shop_table td.subscription-next-payment small,
+.woocommerce table.my_account_subscriptions td.subscription-next-payment small,
+body .woocommerce-account table tbody tr td.subscription-next-payment small,
+body .woocommerce table tbody tr td.subscription-next-payment small {
+    margin-top: 2px !important;
+    line-height: 1.4 !important;
 }
 
 /* Small text (payment method, etc.) */
